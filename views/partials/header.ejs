@@ -1,0 +1,15 @@
+<header class="d-flex justify-content-center py-3">
+  <ul class="nav nav-pills">
+    <li class="nav-link">
+      <a href="/" class="nav-link <%= currentPath === '/'? 'active' : ''%>"
+        >Home</a
+      >
+    </li>
+    <li class="nav-link <%= currentPath === '/about'? 'active' : ''%>">
+      <a href="/about" class="nav-link">About</a>
+    </li>
+    <li class="nav-link <%= currentPath === '/blog'? 'active' : ''%>">
+      <a href="/blog" class="nav-link">Blog</a>
+    </li>
+  </ul>
+</header>
