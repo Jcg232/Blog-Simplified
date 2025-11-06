@@ -11,6 +11,28 @@
     <div>
       <h2><%= post.title %></h2>
       <p><%= post.content %></p>
+      <div class="post-actions">
+        <form action="/delete-post" method="POST">
+          <input type="hidden" name="id" value="<%= post.id %>" />
+          <button type="submit">Delete</button>
+        </form>
+        <button type="button" onclick="toggleEditForm('<%= post.id %>')">
+          Edit
+        </button>
+        <form
+          id="edit-form-<%= post.id %>"
+          action="/update-post"
+          method="POST"
+          style="display: none"
+        >
+          <input type="hidden" name="id" value="<%= post.id %>" />
+          <label for="title">Title:</label>
+          <input type="text" name="title" value="<%= post.title%>" required />
+          <label for="content">Content:</label>
+          <textarea name="content" required><%= post.content %></textarea>
+          <button type="submit">Update</button>
+        </form>
+      </div>
     </div>
     <% })} else {%>
     <p>No blog posts yet. Be the first to publish one!</p>
@@ -18,3 +40,10 @@
   </div>
 </div>
 <div></div>
+
+<script>
+  function toggleEditForm(postId) {
+    const form = document.getElementById("edit-form-" + postId);
+    form.style.display = form.style.display === "none" ? "block" : "none";
+  }
+</script>

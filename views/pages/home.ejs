@@ -1,5 +1,16 @@
 <div>
   <h1>Welcome To The Best Blog In The World</h1>
+
+  <% if(featuredImages && featuredImages.length > 0) { %>
+  <div class="featured-images">
+    <% featuredImages.forEach(function(image) { %>
+    <img src="<%= image %>" alt="Featured Image" class="featured-image" />
+    <% }) %>
+  </div>
+  <% } else { %>
+  <p>No featured images available.</p>
+  <% } %>
+
   <p>
     Welcome! Here I share my thoughts on tech, coding, and life. Check out the
     latest posts below.
