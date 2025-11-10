@@ -1,5 +1,10 @@
 <footer>
   <div class="container">
-    <span>© 2024 Company, Inc</span>
+    <span>© <span id="current-year"></span> Company, Inc</span>
   </div>
 </footer>
+
+<script>
+  document.getElementById("current-year").textContent =
+    new Date().getFullYear();
+</script>

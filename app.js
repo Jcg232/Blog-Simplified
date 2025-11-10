@@ -29,8 +29,8 @@ var arr = [
 ];
 let featuredImages = [
   "/images/default.jpg",
-  "/images/mywife.jpg",
-  "/images/personal.jpg",
+  "/images/mykids.jpg",
+  "/images/steakdinner.jpg",
 ];
 
 app.use(express.static("public"));

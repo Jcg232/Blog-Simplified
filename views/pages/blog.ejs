@@ -1,5 +1,5 @@
-<div>
-  <form action="/blog" method="POST">
+<div class="blog-page">
+  <form action="/blog" method="POST" class="create-post">
     <label for="title">Blog Title:</label>
     <input type="text" name="title" placeholder="Blog Title" required />
     <label for="content">Post</label>
@@ -8,11 +8,11 @@
   </form>
   <div class="posts">
     <% if (posts && posts.length > 0) { %> <% posts.forEach(function(post) { %>
-    <div>
+    <div class="post-card">
       <h2><%= post.title %></h2>
       <p><%= post.content %></p>
       <div class="post-actions">
-        <form action="/delete-post" method="POST">
+        <form action="/delete-post" method="POST" class="edit-post">
           <input type="hidden" name="id" value="<%= post.id %>" />
           <button type="submit">Delete</button>
         </form>
