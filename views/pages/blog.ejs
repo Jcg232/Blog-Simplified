@@ -1,9 +1,16 @@
 <div class="blog-page">
-  <form action="/blog" method="POST" class="create-post">
+  <form
+    action="/blog"
+    method="POST"
+    class="create-post"
+    enctype="multipart/form-data"
+  >
     <label for="title">Blog Title:</label>
     <input type="text" name="title" placeholder="Blog Title" required />
     <label for="content">Post</label>
     <textarea name="content" placeholder="Blog Content" required></textarea>
+    <label for="image_file">Upload an image for your post:</label>
+    <input type="file" name="image_file" accept="image/*" />
     <button type="submit">Publish</button>
   </form>
   <div class="posts">

@@ -19,6 +19,7 @@
         >About</a
       >
     </li>
+    <% if (loggedIn) { %>
     <li class="nav-item">
       <a
         href="/blog"
@@ -26,5 +27,21 @@
         >Blog</a
       >
     </li>
+    <li class="nav-item">
+      <a
+        href="/logout"
+        class="nav-link <%= currentPath === '/logout' ? 'active' : '' %>"
+        >Logout</a
+      >
+    </li>
+    <% } else { %>
+    <li class="nav-item">
+      <a
+        href="/login"
+        class="nav-link <%= currentPath === '/login' ? 'active' : '' %>"
+        >Login</a
+      >
+    </li>
+    <% }%>
   </ul>
 </header>

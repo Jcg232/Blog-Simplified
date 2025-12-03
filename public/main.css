@@ -9,7 +9,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: linear-gradient(to right, #6a11cb, #2575fc);
+  background: linear-gradient(to right, #11998e, #38ef7d, #0f2027);
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -243,4 +243,59 @@ footer {
 
 .edit-post button:hover {
   background-color: #c9302c;
+}
+
+/* Only targets the login form */
+#login-form {
+  max-width: 400px;
+  margin: 50px auto; /* Center form vertically */
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#login-form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#login-form div {
+  margin-bottom: 15px;
+}
+
+#login-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#login-form input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#login-form button:hover {
+  background-color: #0056b3;
+}
+
+#login-form p {
+  color: red;
+  text-align: center;
+  margin-bottom: 15px;
 }
